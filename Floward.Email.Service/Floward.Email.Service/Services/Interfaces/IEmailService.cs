@@ -7,6 +7,6 @@ namespace Floward.Email.Service.Services.Interfaces
 {
     public interface IEmailService
     {
-
+        Task SendEmailAsync(string product);
     }
 }

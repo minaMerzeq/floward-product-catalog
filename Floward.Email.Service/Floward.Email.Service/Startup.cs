@@ -1,4 +1,6 @@
 using Floward.Email.Service.Domain.Configuration;
+using Floward.Email.Service.Services.Implementation;
+using Floward.Email.Service.Services.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -31,6 +33,8 @@ namespace Floward.Email.Service
                 .GetSection("EmailConfiguration")
                 .Get<EmailConfiguration>();
             services.AddSingleton(emailConfig);
+
+            services.AddScoped<IEmailService, EmailService>();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
