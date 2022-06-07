@@ -1,4 +1,8 @@
 using Floward.Product.Catalog.Service.Domain;
+using Floward.Product.Catalog.Service.Domain.Repos.Implementation;
+using Floward.Product.Catalog.Service.Domain.Repos.Interfaces;
+using Floward.Product.Catalog.Service.Services.Implementation;
+using Floward.Product.Catalog.Service.Services.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -29,6 +33,8 @@ namespace Floward.Product.Catalog.Service
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddScoped<IProductRepo, ProductRepo>();
+            services.AddScoped<IProductService, ProductService>();
 
             services.AddControllers();
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
