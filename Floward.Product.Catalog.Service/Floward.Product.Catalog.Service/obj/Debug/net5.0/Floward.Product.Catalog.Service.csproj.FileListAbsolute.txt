@@ -59,3 +59,9 @@ D:\work\projects\TopInterns\dotnet core\Floward-Product-Catalog\Floward.Product.
 D:\work\projects\TopInterns\dotnet core\Floward-Product-Catalog\Floward.Product.Catalog.Service\Floward.Product.Catalog.Service\obj\Debug\net5.0\ref\Floward.Product.Catalog.Service.dll
 D:\work\projects\TopInterns\dotnet core\Floward-Product-Catalog\Floward.Product.Catalog.Service\Floward.Product.Catalog.Service\obj\Debug\net5.0\Floward.Product.Catalog.Service.pdb
 D:\work\projects\TopInterns\dotnet core\Floward-Product-Catalog\Floward.Product.Catalog.Service\Floward.Product.Catalog.Service\obj\Debug\net5.0\Floward.Product.Catalog.Service.genruntimeconfig.cache
+D:\work\projects\TopInterns\dotnet core\Floward-Product-Catalog\Floward.Product.Catalog.Service\Floward.Product.Catalog.Service\bin\Debug\net5.0\AutoMapper.dll
+D:\work\projects\TopInterns\dotnet core\Floward-Product-Catalog\Floward.Product.Catalog.Service\Floward.Product.Catalog.Service\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\work\projects\TopInterns\dotnet core\Floward-Product-Catalog\Floward.Product.Catalog.Service\Floward.Product.Catalog.Service\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\work\projects\TopInterns\dotnet core\Floward-Product-Catalog\Floward.Product.Catalog.Service\Floward.Product.Catalog.Service\bin\Debug\net5.0\Microsoft.Extensions.Options.dll
+D:\work\projects\TopInterns\dotnet core\Floward-Product-Catalog\Floward.Product.Catalog.Service\Floward.Product.Catalog.Service\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
+D:\work\projects\TopInterns\dotnet core\Floward-Product-Catalog\Floward.Product.Catalog.Service\Floward.Product.Catalog.Service\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
