@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.32510.428
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Product.Catalog.Service", "Floward.Product.Catalog.Service\Product.Catalog.Service.csproj", "{C27714C2-22F9-4F5A-AAE7-3CE2FBFF324C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{03547DD2-7B12-424A-A43C-8C1860FFA326}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Product.Catalog.Service.Tests", "Tests\Product.Catalog.Service.Tests\Product.Catalog.Service.Tests.csproj", "{867E7EBF-5EA2-4202-B1DA-73AD7090E44F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +19,16 @@ Global
 		{C27714C2-22F9-4F5A-AAE7-3CE2FBFF324C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C27714C2-22F9-4F5A-AAE7-3CE2FBFF324C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C27714C2-22F9-4F5A-AAE7-3CE2FBFF324C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{867E7EBF-5EA2-4202-B1DA-73AD7090E44F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{867E7EBF-5EA2-4202-B1DA-73AD7090E44F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{867E7EBF-5EA2-4202-B1DA-73AD7090E44F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{867E7EBF-5EA2-4202-B1DA-73AD7090E44F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{867E7EBF-5EA2-4202-B1DA-73AD7090E44F} = {03547DD2-7B12-424A-A43C-8C1860FFA326}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DF669A80-A14D-4B5C-B2F2-D98EC19569AF}
