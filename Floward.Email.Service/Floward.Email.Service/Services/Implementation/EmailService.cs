@@ -17,12 +17,12 @@ namespace Floward.Email.Service.Services.Implementation
         {
             _emailConfig = emailConfig;
         }
-        public async Task SendEmailAsync(string product)
+        public void SendEmail(string product)
         {
             Message message = new Message(new string[] { "put the receiver email" }, "New Product Added!", product + " has been added to the menu.");
 
             var emailMessage = CreateEmailMessage(message);
-            await SendAsync(emailMessage);
+            Send(emailMessage);
         }
 
         #region Helper Methods
@@ -38,17 +38,17 @@ namespace Floward.Email.Service.Services.Implementation
             return emailMessage;
         }
 
-        private async Task SendAsync(MimeMessage mailMessage)
+        private void Send(MimeMessage mailMessage)
         {
             using (var client = new SmtpClient())
             {
                 try
                 {
-                    await client.ConnectAsync(_emailConfig.SmtpServer, _emailConfig.Port, true);
+                    client.Connect(_emailConfig.SmtpServer, _emailConfig.Port, true);
                     client.AuthenticationMechanisms.Remove("XOAUTH2");
-                    await client.AuthenticateAsync(_emailConfig.UserName, _emailConfig.Password);
+                    client.Authenticate(_emailConfig.UserName, _emailConfig.Password);
 
-                    await client.SendAsync(mailMessage);
+                    client.Send(mailMessage);
                 }
                 catch
                 {
@@ -57,7 +57,7 @@ namespace Floward.Email.Service.Services.Implementation
                 }
                 finally
                 {
-                    await client.DisconnectAsync(true);
+                    client.Disconnect(true);
                     client.Dispose();
                 }
             }

@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Floward.Product.Catalog.Service.Domain.Dtos;
 using Floward.Product.Catalog.Service.Domain.Entities;
+using Floward.Product.Catalog.Service.Domain.RabbitMQ.Interfaces;
 using Floward.Product.Catalog.Service.Domain.Repos.Interfaces;
 using Floward.Product.Catalog.Service.Services.Interfaces;
 using Microsoft.AspNetCore.Hosting;
@@ -19,12 +20,14 @@ namespace Floward.Product.Catalog.Service.Services.Implementation
         private readonly IProductRepo _productRepo;
         private readonly IMapper _mapper;
         private readonly IWebHostEnvironment _webHostEnvironment;
+        private readonly IRabbitManager _manager;
 
-        public ProductService(IProductRepo productRepo, IMapper mapper, IWebHostEnvironment webHostEnvironment)
+        public ProductService(IProductRepo productRepo, IMapper mapper, IWebHostEnvironment webHostEnvironment, IRabbitManager manager)
         {
             _productRepo = productRepo;
             _mapper = mapper;
             _webHostEnvironment = webHostEnvironment;
+            _manager = manager;
         }
 
         public async Task<ActionResult<IEnumerable<ProductReadDto>>> GetAllProducts()
@@ -50,6 +53,9 @@ namespace Floward.Product.Catalog.Service.Services.Implementation
             var createdProduct = await _productRepo.CreateProduct(product);
             if (createdProduct != null)
             {
+                // publish message  
+                _manager.Publish(product.Name, "product.exchange", "topic", "product.queue.*");
+
                 return new CreatedResult("/api/Products/" + createdProduct.Id, _mapper.Map<ProductReadDto>(createdProduct));
             }
 
@@ -123,6 +129,7 @@ namespace Floward.Product.Catalog.Service.Services.Implementation
                     Image = UploadImage(productCreateDto.Image)
                 };
         }
+
         #endregion
     }
 }

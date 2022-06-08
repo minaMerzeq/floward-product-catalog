@@ -1,4 +1,5 @@
 using Floward.Product.Catalog.Service.Domain;
+using Floward.Product.Catalog.Service.Domain.RabbitMQ;
 using Floward.Product.Catalog.Service.Domain.Repos.Implementation;
 using Floward.Product.Catalog.Service.Domain.Repos.Interfaces;
 using Floward.Product.Catalog.Service.Services.Implementation;
@@ -35,6 +36,8 @@ namespace Floward.Product.Catalog.Service
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddScoped<IProductRepo, ProductRepo>();
             services.AddScoped<IProductService, ProductService>();
+
+            services.AddRabbit(Configuration);
 
             services.AddControllers();
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());

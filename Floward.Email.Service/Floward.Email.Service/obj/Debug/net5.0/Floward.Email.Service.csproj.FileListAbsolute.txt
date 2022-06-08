@@ -34,3 +34,13 @@ D:\work\projects\TopInterns\dotnet core\Floward-Product-Catalog\Floward.Email.Se
 D:\work\projects\TopInterns\dotnet core\Floward-Product-Catalog\Floward.Email.Service\Floward.Email.Service\obj\Debug\net5.0\ref\Floward.Email.Service.dll
 D:\work\projects\TopInterns\dotnet core\Floward-Product-Catalog\Floward.Email.Service\Floward.Email.Service\obj\Debug\net5.0\Floward.Email.Service.pdb
 D:\work\projects\TopInterns\dotnet core\Floward-Product-Catalog\Floward.Email.Service\Floward.Email.Service\obj\Debug\net5.0\Floward.Email.Service.genruntimeconfig.cache
+D:\work\projects\TopInterns\dotnet core\Floward-Product-Catalog\Floward.Email.Service\Floward.Email.Service\bin\Debug\net5.0\MassTransit.dll
+D:\work\projects\TopInterns\dotnet core\Floward-Product-Catalog\Floward.Email.Service\Floward.Email.Service\bin\Debug\net5.0\MassTransit.Abstractions.dll
+D:\work\projects\TopInterns\dotnet core\Floward-Product-Catalog\Floward.Email.Service\Floward.Email.Service\bin\Debug\net5.0\MassTransit.AspNetCoreIntegration.dll
+D:\work\projects\TopInterns\dotnet core\Floward-Product-Catalog\Floward.Email.Service\Floward.Email.Service\bin\Debug\net5.0\MassTransit.ExtensionsDependencyInjectionIntegration.dll
+D:\work\projects\TopInterns\dotnet core\Floward-Product-Catalog\Floward.Email.Service\Floward.Email.Service\bin\Debug\net5.0\MassTransit.RabbitMqTransport.dll
+D:\work\projects\TopInterns\dotnet core\Floward-Product-Catalog\Floward.Email.Service\Floward.Email.Service\bin\Debug\net5.0\RabbitMQ.Client.dll
+D:\work\projects\TopInterns\dotnet core\Floward-Product-Catalog\Floward.Email.Service\Floward.Email.Service\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+D:\work\projects\TopInterns\dotnet core\Floward-Product-Catalog\Floward.Email.Service\Floward.Email.Service\bin\Debug\net5.0\System.Text.Encodings.Web.dll
+D:\work\projects\TopInterns\dotnet core\Floward-Product-Catalog\Floward.Email.Service\Floward.Email.Service\bin\Debug\net5.0\System.Text.Json.dll
+D:\work\projects\TopInterns\dotnet core\Floward-Product-Catalog\Floward.Email.Service\Floward.Email.Service\bin\Debug\net5.0\System.Threading.Channels.dll
