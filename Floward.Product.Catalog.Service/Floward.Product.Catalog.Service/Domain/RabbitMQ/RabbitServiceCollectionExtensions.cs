@@ -1,5 +1,5 @@
-﻿using Floward.Product.Catalog.Service.Domain.RabbitMQ.Implementation;
-using Floward.Product.Catalog.Service.Domain.RabbitMQ.Interfaces;
+﻿using Product.Catalog.Service.Domain.RabbitMQ.Implementation;
+using Product.Catalog.Service.Domain.RabbitMQ.Interfaces;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.ObjectPool;
@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Floward.Product.Catalog.Service.Domain.RabbitMQ
+namespace Product.Catalog.Service.Domain.RabbitMQ
 {
     public static class RabbitServiceCollectionExtensions
     {

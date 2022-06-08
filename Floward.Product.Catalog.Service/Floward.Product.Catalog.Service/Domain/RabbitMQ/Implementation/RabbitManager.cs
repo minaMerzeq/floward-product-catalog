@@ -1,4 +1,4 @@
-﻿using Floward.Product.Catalog.Service.Domain.RabbitMQ.Interfaces;
+﻿using Product.Catalog.Service.Domain.RabbitMQ.Interfaces;
 using Microsoft.Extensions.ObjectPool;
 using Newtonsoft.Json;
 using RabbitMQ.Client;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Floward.Product.Catalog.Service.Domain.RabbitMQ.Implementation
+namespace Product.Catalog.Service.Domain.RabbitMQ.Implementation
 {
     public class RabbitManager : IRabbitManager
     {

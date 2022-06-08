@@ -1423,9 +1423,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\work\\projects\\TopInterns\\dotnet core\\Floward-Product-Catalog\\Floward.Email.Service\\Floward.Email.Service\\Floward.Email.Service.csproj",
-      "projectName": "Floward.Email.Service",
-      "projectPath": "D:\\work\\projects\\TopInterns\\dotnet core\\Floward-Product-Catalog\\Floward.Email.Service\\Floward.Email.Service\\Floward.Email.Service.csproj",
+      "projectUniqueName": "D:\\work\\projects\\TopInterns\\dotnet core\\Floward-Product-Catalog\\Floward.Email.Service\\Floward.Email.Service\\Email.Service.csproj",
+      "projectName": "Email.Service",
+      "projectPath": "D:\\work\\projects\\TopInterns\\dotnet core\\Floward-Product-Catalog\\Floward.Email.Service\\Floward.Email.Service\\Email.Service.csproj",
       "packagesPath": "C:\\Users\\minam\\.nuget\\packages\\",
       "outputPath": "D:\\work\\projects\\TopInterns\\dotnet core\\Floward-Product-Catalog\\Floward.Email.Service\\Floward.Email.Service\\obj\\",
       "projectStyle": "PackageReference",

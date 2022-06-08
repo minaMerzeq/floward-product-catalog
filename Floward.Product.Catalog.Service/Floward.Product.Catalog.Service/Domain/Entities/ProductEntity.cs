@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Floward.Product.Catalog.Service.Domain.Entities
+namespace Product.Catalog.Service.Domain.Entities
 {
     public class ProductEntity
     {

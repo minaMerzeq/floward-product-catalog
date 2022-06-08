@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Floward.Email.Service.Domain.Configuration
+namespace Email.Service.Domain.Configuration
 {
     public class EmailConfiguration
     {

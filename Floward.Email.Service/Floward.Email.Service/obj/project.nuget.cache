@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mxOYmxi1BuN+lT2j0NCS0URLDi9cXhWnLs5C3jA1g69ka/NdZWFapjJz8GhW/hOCKZrCkD51GqMENnKsj1SEwg==",
+  "dgSpecHash": "l2H/3aa7CNRbvYAvPX2SRRLc3vVI+gq0SrlEaeey8hzMxDIU73vKqt0HzNyyaI6g6jE33k11q65ZjKV6rnCvRg==",
   "success": true,
-  "projectFilePath": "D:\\work\\projects\\TopInterns\\dotnet core\\Floward-Product-Catalog\\Floward.Email.Service\\Floward.Email.Service\\Floward.Email.Service.csproj",
+  "projectFilePath": "D:\\work\\projects\\TopInterns\\dotnet core\\Floward-Product-Catalog\\Floward.Email.Service\\Floward.Email.Service\\Email.Service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\minam\\.nuget\\packages\\mailkit\\3.2.0\\mailkit.3.2.0.nupkg.sha512",
     "C:\\Users\\minam\\.nuget\\packages\\masstransit\\8.0.3\\masstransit.8.0.3.nupkg.sha512",

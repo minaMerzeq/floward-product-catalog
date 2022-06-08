@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Floward.Email.Service.Domain.Entities
+namespace Email.Service.Domain.Entities
 {
     public class Message
     {

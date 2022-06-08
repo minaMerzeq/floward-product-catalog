@@ -1,9 +1,9 @@
-using Floward.Product.Catalog.Service.Domain;
-using Floward.Product.Catalog.Service.Domain.RabbitMQ;
-using Floward.Product.Catalog.Service.Domain.Repos.Implementation;
-using Floward.Product.Catalog.Service.Domain.Repos.Interfaces;
-using Floward.Product.Catalog.Service.Services.Implementation;
-using Floward.Product.Catalog.Service.Services.Interfaces;
+using Product.Catalog.Service.Domain;
+using Product.Catalog.Service.Domain.RabbitMQ;
+using Product.Catalog.Service.Domain.Repos.Implementation;
+using Product.Catalog.Service.Domain.Repos.Interfaces;
+using Product.Catalog.Service.Services.Implementation;
+using Product.Catalog.Service.Services.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -19,7 +19,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Floward.Product.Catalog.Service
+namespace Product.Catalog.Service
 {
     public class Startup
     {
@@ -43,7 +43,7 @@ namespace Floward.Product.Catalog.Service
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Floward.Product.Catalog.Service", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Product.Catalog.Service", Version = "v1" });
             });
         }
 
@@ -54,7 +54,7 @@ namespace Floward.Product.Catalog.Service
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Floward.Product.Catalog.Service v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Product.Catalog.Service v1"));
             }
 
             app.UseHttpsRedirection();

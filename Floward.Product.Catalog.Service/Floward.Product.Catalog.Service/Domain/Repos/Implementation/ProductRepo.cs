@@ -1,12 +1,12 @@
-﻿using Floward.Product.Catalog.Service.Domain.Entities;
-using Floward.Product.Catalog.Service.Domain.Repos.Interfaces;
+﻿using Product.Catalog.Service.Domain.Entities;
+using Product.Catalog.Service.Domain.Repos.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Floward.Product.Catalog.Service.Domain.Repos.Implementation
+namespace Product.Catalog.Service.Domain.Repos.Implementation
 {
     public class ProductRepo : IProductRepo
     {

@@ -1,10 +1,10 @@
-﻿using Floward.Product.Catalog.Service.Domain.Entities;
+﻿using Product.Catalog.Service.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Floward.Product.Catalog.Service.Domain.Repos.Interfaces
+namespace Product.Catalog.Service.Domain.Repos.Interfaces
 {
     public interface IProductRepo
     {

@@ -1,11 +1,11 @@
-﻿using Floward.Product.Catalog.Service.Domain.Dtos;
+﻿using Product.Catalog.Service.Domain.Dtos;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Floward.Product.Catalog.Service.Services.Interfaces
+namespace Product.Catalog.Service.Services.Interfaces
 {
     public interface IProductService
     {

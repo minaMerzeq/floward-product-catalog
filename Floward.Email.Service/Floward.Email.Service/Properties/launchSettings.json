@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "Floward.Email.Service": {
+    "Email.Service": {
       "commandName": "Project",
       "dotnetRunMessages": "true",
       "launchBrowser": true,

@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Floward.Email.Service
+namespace Email.Service
 {
     public class Program
     {

@@ -1,11 +1,11 @@
-﻿using Floward.Product.Catalog.Service.Domain.Entities;
+﻿using Product.Catalog.Service.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Floward.Product.Catalog.Service.Domain
+namespace Product.Catalog.Service.Domain
 {
     public class AppDbContext : DbContext
     {

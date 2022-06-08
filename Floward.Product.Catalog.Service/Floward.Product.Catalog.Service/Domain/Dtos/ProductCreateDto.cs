@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using System.ComponentModel.DataAnnotations;
 
-namespace Floward.Product.Catalog.Service.Domain.Dtos
+namespace Product.Catalog.Service.Domain.Dtos
 {
     public class ProductCreateDto
     {

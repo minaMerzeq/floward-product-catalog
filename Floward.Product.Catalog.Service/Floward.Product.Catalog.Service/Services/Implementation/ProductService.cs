@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
-using Floward.Product.Catalog.Service.Domain.Dtos;
-using Floward.Product.Catalog.Service.Domain.Entities;
-using Floward.Product.Catalog.Service.Domain.RabbitMQ.Interfaces;
-using Floward.Product.Catalog.Service.Domain.Repos.Interfaces;
-using Floward.Product.Catalog.Service.Services.Interfaces;
+using Product.Catalog.Service.Domain.Dtos;
+using Product.Catalog.Service.Domain.Entities;
+using Product.Catalog.Service.Domain.RabbitMQ.Interfaces;
+using Product.Catalog.Service.Domain.Repos.Interfaces;
+using Product.Catalog.Service.Services.Interfaces;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -13,7 +13,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Floward.Product.Catalog.Service.Services.Implementation
+namespace Product.Catalog.Service.Services.Implementation
 {
     public class ProductService : IProductService
     {

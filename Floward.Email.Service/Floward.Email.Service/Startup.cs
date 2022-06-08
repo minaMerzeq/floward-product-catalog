@@ -1,7 +1,7 @@
-using Floward.Email.Service.Controllers;
-using Floward.Email.Service.Domain.Configuration;
-using Floward.Email.Service.Services.Implementation;
-using Floward.Email.Service.Services.Interfaces;
+using Email.Service.Controllers;
+using Email.Service.Domain.Configuration;
+using Email.Service.Services.Implementation;
+using Email.Service.Services.Interfaces;
 using MassTransit;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -17,7 +17,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Floward.Email.Service
+namespace Email.Service
 {
     public class Startup
     {

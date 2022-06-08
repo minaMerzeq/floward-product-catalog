@@ -1,4 +1,4 @@
-﻿namespace Floward.Product.Catalog.Service.Domain.Dtos
+﻿namespace Product.Catalog.Service.Domain.Dtos
 {
     public class ProductReadDto
     {

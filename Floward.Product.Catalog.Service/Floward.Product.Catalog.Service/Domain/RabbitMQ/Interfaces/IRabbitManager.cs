@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Floward.Product.Catalog.Service.Domain.RabbitMQ.Interfaces
+namespace Product.Catalog.Service.Domain.RabbitMQ.Interfaces
 {
     public interface IRabbitManager
     {

@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Floward.Product.Catalog.Service.Migrations
+namespace Product.Catalog.Service.Migrations
 {
     public partial class AddProductModel : Migration
     {

@@ -1,6 +1,6 @@
-﻿using Floward.Email.Service.Domain.Configuration;
-using Floward.Email.Service.Domain.Entities;
-using Floward.Email.Service.Services.Interfaces;
+﻿using Email.Service.Domain.Configuration;
+using Email.Service.Domain.Entities;
+using Email.Service.Services.Interfaces;
 using MailKit.Net.Smtp;
 using MimeKit;
 using System;
@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Floward.Email.Service.Services.Implementation
+namespace Email.Service.Services.Implementation
 {
     public class EmailService : IEmailService
     {

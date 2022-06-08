@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "E8VonZkV/ZSzOgwW2fWsUhTisO7QtTGBOfbeMl0d9fCN0hrt3DV4NQsJAkjqRXkDjK2MwnNUWjhVEdxn1m8hSA==",
+  "dgSpecHash": "R0S4QX6BsIeiL8/49ejprladt9+LupLQz6nCUJCHvqbTh7VXG5DNmsr9vYK64pWFTbhLhzipPRkx8rFnS+WNdg==",
   "success": true,
-  "projectFilePath": "D:\\work\\projects\\TopInterns\\dotnet core\\Floward-Product-Catalog\\Floward.Product.Catalog.Service\\Floward.Product.Catalog.Service\\Floward.Product.Catalog.Service.csproj",
+  "projectFilePath": "D:\\work\\projects\\TopInterns\\dotnet core\\Floward-Product-Catalog\\Floward.Product.Catalog.Service\\Floward.Product.Catalog.Service\\Product.Catalog.Service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\minam\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
     "C:\\Users\\minam\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",

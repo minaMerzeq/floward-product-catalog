@@ -6603,9 +6603,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\work\\projects\\TopInterns\\dotnet core\\Floward-Product-Catalog\\Floward.Product.Catalog.Service\\Floward.Product.Catalog.Service\\Floward.Product.Catalog.Service.csproj",
-      "projectName": "Floward.Product.Catalog.Service",
-      "projectPath": "D:\\work\\projects\\TopInterns\\dotnet core\\Floward-Product-Catalog\\Floward.Product.Catalog.Service\\Floward.Product.Catalog.Service\\Floward.Product.Catalog.Service.csproj",
+      "projectUniqueName": "D:\\work\\projects\\TopInterns\\dotnet core\\Floward-Product-Catalog\\Floward.Product.Catalog.Service\\Floward.Product.Catalog.Service\\Product.Catalog.Service.csproj",
+      "projectName": "Product.Catalog.Service",
+      "projectPath": "D:\\work\\projects\\TopInterns\\dotnet core\\Floward-Product-Catalog\\Floward.Product.Catalog.Service\\Floward.Product.Catalog.Service\\Product.Catalog.Service.csproj",
       "packagesPath": "C:\\Users\\minam\\.nuget\\packages\\",
       "outputPath": "D:\\work\\projects\\TopInterns\\dotnet core\\Floward-Product-Catalog\\Floward.Product.Catalog.Service\\Floward.Product.Catalog.Service\\obj\\",
       "projectStyle": "PackageReference",

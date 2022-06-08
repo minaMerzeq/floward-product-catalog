@@ -1,5 +1,5 @@
-﻿using Floward.Email.Service.Domain.Entities;
-using Floward.Email.Service.Services.Interfaces;
+﻿using Email.Service.Domain.Entities;
+using Email.Service.Services.Interfaces;
 using MassTransit;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -12,7 +12,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Floward.Email.Service.Controllers
+namespace Email.Service.Controllers
 {
     public class EmailController: BackgroundService
     {

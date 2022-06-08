@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "Floward.Product.Catalog.Service": {
+    "Product.Catalog.Service": {
       "commandName": "Project",
       "dotnetRunMessages": "true",
       "launchBrowser": true,

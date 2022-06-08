@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32510.428
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Floward.Product.Catalog.Service", "Floward.Product.Catalog.Service\Floward.Product.Catalog.Service.csproj", "{C27714C2-22F9-4F5A-AAE7-3CE2FBFF324C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Product.Catalog.Service", "Floward.Product.Catalog.Service\Product.Catalog.Service.csproj", "{C27714C2-22F9-4F5A-AAE7-3CE2FBFF324C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
