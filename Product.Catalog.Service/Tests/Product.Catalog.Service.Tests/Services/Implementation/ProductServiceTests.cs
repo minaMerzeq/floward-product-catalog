@@ -1,7 +1,7 @@
 using AutoMapper;
 using FakeItEasy;
 using FluentAssertions;
-using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Product.Catalog.Service.Domain.Dtos;
 using Product.Catalog.Service.Domain.Entities;
@@ -22,7 +22,7 @@ namespace Product.Catalog.Service.Tests
     {
         private readonly IProductRepo _productRepoFake;
         private readonly IMapper _mapperFake;
-        private readonly IWebHostEnvironment _webHostEnvironment;
+        private readonly IImageService _imageService;
         private readonly IRabbitManager _managerFake;
 
         private readonly IProductService _sut;
@@ -38,8 +38,8 @@ namespace Product.Catalog.Service.Tests
             
             _productRepoFake = A.Fake<IProductRepo>();
             _managerFake = A.Fake<IRabbitManager>();
-            _webHostEnvironment = A.Fake<IWebHostEnvironment>();
-            _sut = new ProductService(_productRepoFake, _mapperFake, _webHostEnvironment, _managerFake);
+            _imageService = A.Fake<IImageService>();
+            _sut = new ProductService(_productRepoFake, _mapperFake, _imageService, _managerFake);
         }
 
         [Fact]
@@ -68,7 +68,7 @@ namespace Product.Catalog.Service.Tests
         public async Task GetProductById_ShouldReturnOkResponse_WhenDataFound()
         {
             //Arrange
-            int id = 1;
+            int id = A.Dummy<int>();
             var fakeProduct = A.Dummy<ProductEntity>();
             A.CallTo(() => _productRepoFake.GetProductById(id)).Returns(Task.FromResult(fakeProduct));
 
@@ -85,19 +85,116 @@ namespace Product.Catalog.Service.Tests
         }
 
         [Fact]
-        public async Task DeleteProduct_ShouldReturnOkResponse_WhenValidId()
+        public async Task GetProductById_ShouldReturnNotFound_WhenNoDataFound()
         {
             //Arrange
-            int id = 1;
-            var fakeProduct = A.Dummy<ProductEntity>();
-            A.CallTo(() => _productRepoFake.DeleteProduct(fakeProduct)).Returns(Task.FromResult(true));
+            int id = A.Dummy<int>();
+            ProductEntity fakeProduct = null;
+            A.CallTo(() => _productRepoFake.GetProductById(id)).Returns(Task.FromResult(fakeProduct));
 
             //Act
             var actionResult = await _sut.GetProductById(id);
 
             //Assert
             actionResult.Should().NotBeNull();
+            actionResult.Result.Should().BeAssignableTo<NotFoundResult>();
+        }
+
+        [Fact]
+        public async Task CreateProduct_ShouldReturnCreated_WhenValidRequest()
+        {
+            //Arrange
+            var fakeProduct = A.Dummy<ProductEntity>();
+            var fakeProductCreateDto = A.Dummy<ProductCreateDto>();
+            var image = A.Dummy<IFormFile>();
+            A.CallTo(() => _productRepoFake.CreateProduct(fakeProduct)).Returns(Task.FromResult(fakeProduct));
+            A.CallTo(() => _imageService.UploadImage(image)).Returns("image.jpg");
+            A.CallTo(() => _managerFake.Publish("", "dummy-exchange", "topic", "dummy.key.*")).DoesNothing();
+
+            //Act
+            var actionResult = await _sut.CreateProduct(fakeProductCreateDto);
+
+            //Assert
+            actionResult.Should().NotBeNull();
+            actionResult.Result.Should().BeAssignableTo<CreatedResult>();
+            actionResult.Result.As<CreatedResult>().Value
+                .Should()
+                .NotBeNull()
+                .And.BeOfType(typeof(ProductReadDto));
+        }
+
+        [Fact]
+        public async Task UpdateProduct_ShouldReturnOkResponse_WhenValidRequest()
+        {
+            //Arrange
+            int id = A.Dummy<int>();
+            var fakeProduct = A.Dummy<ProductEntity>();
+            var fakeProductCreateDto = A.Dummy<ProductCreateDto>();
+            var image = A.Dummy<IFormFile>();
+            A.CallTo(() => _productRepoFake.UpdateProduct(fakeProduct)).Returns(Task.FromResult(fakeProduct));
+            A.CallTo(() => _productRepoFake.GetProductById(id)).Returns(Task.FromResult(fakeProduct));
+            A.CallTo(() => _imageService.UploadImage(image)).Returns("image.jpg");
+
+            //Act
+            var actionResult = await _sut.UpdateProduct(id, fakeProductCreateDto);
+
+            //Assert
+            actionResult.Should().NotBeNull();
             actionResult.Result.Should().BeAssignableTo<OkObjectResult>();
+            actionResult.Result.As<OkObjectResult>().Value
+                .Should()
+                .NotBeNull()
+                .And.BeOfType(typeof(ProductReadDto));
+        }
+
+        [Fact]
+        public async Task UpdateProduct_ShouldReturnNotFound_WhenInvalidId()
+        {
+            //Arrange
+            int id = A.Dummy<int>();
+            ProductEntity fakeProduct = null;
+            var fakeProductCreateDto = A.Dummy<ProductCreateDto>();
+            A.CallTo(() => _productRepoFake.GetProductById(id)).Returns(Task.FromResult(fakeProduct));
+
+            //Act
+            var actionResult = await _sut.UpdateProduct(id, fakeProductCreateDto);
+
+            //Assert
+            actionResult.Should().NotBeNull();
+            actionResult.Result.Should().BeAssignableTo<NotFoundResult>();
+        }
+
+        [Fact]
+        public async Task DeleteProduct_ShouldReturnOkResponse_WhenValidId()
+        {
+            //Arrange
+            int id = A.Dummy<int>();
+            var fakeProduct = A.Dummy<ProductEntity>();
+            A.CallTo(() => _productRepoFake.GetProductById(id)).Returns(Task.FromResult(fakeProduct));
+            A.CallTo(() => _productRepoFake.DeleteProduct(fakeProduct)).Returns(Task.FromResult(true));
+
+            //Act
+            var actionResult = await _sut.DeleteProduct(id);
+
+            //Assert
+            actionResult.Should().NotBeNull();
+            actionResult.Should().BeAssignableTo<OkResult>();
+        }
+
+        [Fact]
+        public async Task DeleteProduct_ShouldReturnNotFound_WhenInvalidId()
+        {
+            //Arrange
+            int id = A.Dummy<int>();
+            ProductEntity fakeProduct = null;
+            A.CallTo(() => _productRepoFake.GetProductById(id)).Returns(Task.FromResult(fakeProduct));
+
+            //Act
+            var actionResult = await _sut.DeleteProduct(id);
+
+            //Assert
+            actionResult.Should().NotBeNull();
+            actionResult.Should().BeAssignableTo<NotFoundResult>();
         }
     }
 }
