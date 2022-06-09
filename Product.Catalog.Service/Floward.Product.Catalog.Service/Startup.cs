@@ -36,6 +36,7 @@ namespace Product.Catalog.Service
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddScoped<IProductRepo, ProductRepo>();
             services.AddScoped<IProductService, ProductService>();
+            services.AddScoped<IImageService, ImageService>();
 
             services.AddRabbit(Configuration);
 
