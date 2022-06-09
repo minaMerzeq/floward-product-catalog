@@ -22,7 +22,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Floward.Product.Catalog.Service\Product.Catalog.Service.csproj" />
     <ProjectReference Include="..\..\Product.Catalog.Service\Product.Catalog.Service.csproj" />
   </ItemGroup>
 
